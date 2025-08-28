@@ -46,13 +46,13 @@
         <div
           class="flex items-center justify-center gap-2 bg-[#41ff6b1a] rounded-3xl min-w-[80px] px-4 py-[7px]"
         >
-          <h2 class="font-bold">0</h2>
+          <h2 id="heart-count" class="font-bold">0</h2>
           <img src="assets/heart.png" alt="Heart" class="w-[20px] h-[20px]" />
         </div>
         <div
           class="flex items-center justify-center gap-2 bg-[#41ff6b1a] rounded-3xl min-w-[80px] px-4 py-[7px]"
         >
-          <h2 class="font-bold">100</h2>
+          <h2 id="available-coins" class="font-bold">100</h2>
           <img src="assets/coin.png" alt="Coins" class="w-[20px] h-[20px]" />
         </div>
         <div
@@ -83,11 +83,11 @@
     <!-- main section -->
     <main class="min-h-screen bg-[#F5FFF6] font-[outfit]">
       <div
-        class="grid xl:lg:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1"
+        class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1"
       >
         <!-- call history container -->
         <div
-          class="bg-white shadow rounded-xl m-5 mr-0 lg:m-7 lg:ml-0 p-4 sm:p-6 flex justify-between lg:col-span-1 sm:col-span-1 order-1 lg:order-2"
+          class="bg-white shadow rounded-xl m-5 mr-0 lg:m-7 lg:ml-0 p-4 sm:p-6 flex justify-between lg:col-span-1 sm:col-span-1 order-1 sm:order-2 lg:order-2"
         >
           <div>
             <h2 class="text-lg font-normal mb-2">
@@ -104,7 +104,7 @@
         </div>
         <!-- cards container -->
         <div
-          class="m-5 ml-4 lg:m-7 lg:mr-4 xl:col-span-3 lg:col-span-2 sm:col-span-1 order-2 lg:order-1 grid gap-4 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+          class="m-5 ml-4 lg:m-7 lg:mr-4 xl:col-span-3 lg:col-span-2 sm:col-span-1 order-2 sm:order-1 lg:order-1 grid gap-4 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
         >
           <!-- Card no 1 -->
           <div class="p-4 sm:p-6 bg-white shadow rounded-xl">
@@ -125,22 +125,22 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 National Emergency Number
               </h2>
-              <p class="text-base text-[#5c5c5c]">National Emergency</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">999</h3>
+              <p class="service-name text-base text-[#5c5c5c]">National Emergency</p>
+              <h3 class="sevice-number mt-5 mb-2 font-bold text-3xl">999</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">all</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -165,22 +165,22 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 Police Helpline Number
               </h2>
-              <p class="text-base text-[#5c5c5c]">Police</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">999</h3>
+              <p class="service-name text-base text-[#5c5c5c]">Police</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">999</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">Police</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -205,22 +205,22 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 Fire Service Number
               </h2>
-              <p class="text-base text-[#5c5c5c]">Fire Service</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">999</h3>
+              <p class="service-name text-base text-[#5c5c5c]">Fire Service</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">999</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">Fire</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -245,22 +245,22 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 Ambulance Service
               </h2>
-              <p class="text-base text-[#5c5c5c]">Ambulance</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">1994-999999</h3>
+              <p class="service-name text-base text-[#5c5c5c]">Ambulance</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">1994-999999</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">Health</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -285,22 +285,22 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 Women & Child Helpline
               </h2>
-              <p class="text-base text-[#5c5c5c]">Women & Child Helpline</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">109</h3>
+              <p class="service-name text-base text-[#5c5c5c]">Women & Child Helpline</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">109</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">Help</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -325,22 +325,22 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 Anti-Corruption Helpline
               </h2>
-              <p class="text-base text-[#5c5c5c]">Anti-Corruption</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">106</h3>
+              <p class="service-name text-base text-[#5c5c5c]">Anti-Corruption</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">106</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">Govt.</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -365,11 +365,11 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 Electricity Helpline
               </h2>
-              <p class="text-base text-[#5c5c5c]">Electricity Outage</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">16216</h3>
+              <p class="service-name text-base text-[#5c5c5c]">Electricity Outage</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">16216</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl"
                 >Electricity</span
               >
@@ -377,12 +377,12 @@
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -407,20 +407,20 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">Brac Helpline</h2>
-              <p class="text-base text-[#5c5c5c]">Brac</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">16445</h3>
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">Brac Helpline</h2>
+              <p class="service-name text-base text-[#5c5c5c]">Brac</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">16445</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">NGO</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -445,22 +445,22 @@
             </div>
             <!-- card information part -->
             <div class="mt-2">
-              <h2 class="font-semibold text-lg sm:text-xl">
+              <h2 class="font-semibold text-base sm:text-lg 2xl:text-xl">
                 Bangladesh Railway Helpline
               </h2>
-              <p class="text-base text-[#5c5c5c]">Bangladesh Railway</p>
-              <h3 class="mt-5 mb-2 font-bold text-3xl">163</h3>
+              <p class="service-name text-base text-[#5c5c5c]">Bangladesh Railway</p>
+              <h3 class="service-number mt-5 mb-2 font-bold text-3xl">163</h3>
               <span class="bg-[#F2F2F2] px-5 py-1 rounded-2xl">Travel</span>
             </div>
             <!-- card button part -->
             <div class="flex mt-4 gap-2">
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-copy w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg hover:bg-[#e4e4e4] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-regular fa-copy mr-2"></i>Copy
               </button>
               <button
-                class="w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
+                class="btn-call w-1/2 border-2 border-[#d4d6d5] py-2 rounded-lg bg-[#00a63e] text-white hover:bg-[#9a9999] hover:scale-105 transform transition duration-300 ease-in-out"
               >
                 <i class="fa-solid fa-phone mr-2"></i>Call
               </button>
@@ -469,5 +469,6 @@
         </div>
       </div>
     </main>
+    <script src="js/functions.js"></script>
   </body>
 </html>
