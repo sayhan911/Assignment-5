@@ -34,10 +34,11 @@ callBtn.forEach(function (call, index) {
     addCallHistory(serviceTitle[index].innerText, serviceNum[index].innerText);
   });
 });
-// Call history section functionality
+// Call history & clear button functionality
+const clearBtn = document.getElementById("btn-clear");
+const callHistory = document.getElementById("call-history");
+// call history part
 function addCallHistory(name, number) {
-  const callHistory = document.getElementById("call-history");
-
   const now = new Date();
   let time = now.toLocaleTimeString([], {
     hour: "2-digit",
@@ -57,17 +58,28 @@ function addCallHistory(name, number) {
 </div>`;
   callHistory.innerHTML += record;
 }
-// Clear button functionality
-const clearBtn = document.getElementById("btn-clear");
-const callHistory = document.getElementById("call-history");
+// clear button part
 clearBtn.addEventListener("click", function () {
   callHistory.innerHTML = "";
 });
+
 // Copy button functionality
 const copyBtn = document.querySelectorAll(".btn-copy");
+const copyCount = document.getElementById("copy-count");
 
-copyBtn.forEach(function (call) {
-  call.addEventListener("click", function () {
-    console.log("copy button clicked");
+copyBtn.forEach(function (copy, index) {
+  copy.addEventListener("click", function () {
+    const number = serviceNum[index].innerText;
+    navigator.clipboard
+      .writeText(number)
+      .then(function () {
+        alert("📋Number copied to clipboard: " + number);
+        let currentCopy = parseInt(copyCount.innerText);
+        copyCount.innerText = currentCopy + 1;
+      })
+      .catch(function (err) {
+        alert("Copy failed. Try again!");
+        console.error(err);
+      });
   });
 });
