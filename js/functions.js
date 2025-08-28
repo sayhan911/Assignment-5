@@ -10,28 +10,64 @@ heartIcon.forEach(function (icon) {
 });
 
 // Call button functionality
-const callBtn = document.querySelectorAll(".btn-call")
-const serviceName = document.querySelectorAll('.service-name')
-const serviceNum = document.querySelectorAll('.service-number')
-const availCoins = document.getElementById('available-coins')
+const callBtn = document.querySelectorAll(".btn-call");
+const serviceTitle = document.querySelectorAll(".service-title");
+const serviceName = document.querySelectorAll(".service-name");
+const serviceNum = document.querySelectorAll(".service-number");
+const availCoins = document.getElementById("available-coins");
 
-callBtn.forEach(function(call, index){
-    call.addEventListener('click', function(){
-        let currentCoins = parseInt(availCoins.innerText)
-        if(currentCoins<20){
-            alert("❌ Not enough coin. You need minimum 20 coins to make a call.")
-            return;
-        }
-        alert('📞 Calling '+ serviceName[index].innerText+ ' (' + serviceNum[index].innerText+')')
-        availCoins.innerText = currentCoins-20;
-        
-    })
-})
+callBtn.forEach(function (call, index) {
+  call.addEventListener("click", function () {
+    let currentCoins = parseInt(availCoins.innerText);
+    if (currentCoins < 20) {
+      alert("❌ Not enough coin. You need minimum 20 coins to make a call.");
+      return;
+    }
+    alert(
+      "📞 Calling " +
+        serviceName[index].innerText +
+        " (" +
+        serviceNum[index].innerText +
+        ")"
+    );
+    availCoins.innerText = currentCoins - 20;
+    addCallHistory(serviceTitle[index].innerText, serviceNum[index].innerText);
+  });
+});
+// Call history section functionality
+function addCallHistory(name, number) {
+  const callHistory = document.getElementById("call-history");
+
+  const now = new Date();
+  let time = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+  time = time.toUpperCase();
+
+  const record = `
+  <div class="flex justify-between items-center bg-[#fafafa] p-3 mb-2 rounded-xl">
+  <div class="w-2/3">
+    <h1 class="font-medium mb-1 text-lg">${name}</h1>
+    <p class="font-light text-gray-600">${number}</p>
+  </div>
+  <span class="font-light text-sm">${time}</span>
+</div>`;
+  callHistory.innerHTML += record;
+}
+// Clear button functionality
+const clearBtn = document.getElementById("btn-clear");
+const callHistory = document.getElementById("call-history");
+clearBtn.addEventListener("click", function () {
+  callHistory.innerHTML = "";
+});
 // Copy button functionality
-const copyBtn = document.querySelectorAll(".btn-copy")
+const copyBtn = document.querySelectorAll(".btn-copy");
 
-copyBtn.forEach(function(call){
-    call.addEventListener('click', function(){
-        console.log('copy button clicked')
-    })
-})
+copyBtn.forEach(function (call) {
+  call.addEventListener("click", function () {
+    console.log("copy button clicked");
+  });
+});
